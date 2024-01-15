@@ -1,7 +1,17 @@
 function isPalindrome(word) {
   // Write your algorithm here
+  // Convert the input string to lowercase for case-insensitive comparison
+  const lowerCaseWord = word.toLowerCase();
+  
+  // Convert the input string to an array of characters
+  const strArray = lowerCaseWord.split('');
+  
+  // Reverse the array
+  const reversedArray = strArray.slice().reverse();
+  
+  // Compare the reversed array with the original array
+  return strArray.join('') === reversedArray.join('');
 }
-
 /* 
   Add your pseudocode here
 */
@@ -10,7 +20,6 @@ function isPalindrome(word) {
   Add written explanation of your solution here
 */
 
-// You can run `node index.js` to view these console logs
 if (require.main === module) {
   // add your own custom tests in here
   console.log("Expecting: true");
